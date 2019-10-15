@@ -1,0 +1,6 @@
+{
+    "port":80,
+    "name":"gateway",
+    "logPath":"logs",
+    "logLevel": "debug"
+}

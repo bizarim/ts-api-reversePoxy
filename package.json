@@ -1,0 +1,47 @@
+{
+  "name": "ts-api-reversePoxy",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "tslint -p .",
+    "build": "npm run lint && rimraf dist && npm run copy && tsc",
+    "d": "set NODE_ENV=dev&& npm run build && nodemon --config nodemon.json",
+    "copy": "copyfiles -u 2 \"./src/config/*.json\" \"./dist/config/\"",
+    "start": "npm run lint && npm run lint && tsc && node dist/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bizarim/ts-api-reversePoxy.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bizarim/ts-api-reversePoxy/issues"
+  },
+  "homepage": "https://github.com/bizarim/ts-api-reversePoxy#readme",
+  "dependencies": {
+    "@nestjs/common": "^6.6.7",
+    "@nestjs/core": "^6.6.7",
+    "@nestjs/platform-express": "^6.6.7",
+    "@types/http-proxy-middleware": "^0.19.0",
+    "class-transformer": "^0.2.3",
+    "class-validator": "^0.10.0",
+    "copyfiles": "^2.1.1",
+    "http-proxy-middleware": "^0.19.1",
+    "reflect-metadata": "^0.1.13",
+    "rimraf": "^3.0.0",
+    "rxjs": "^6.5.3",
+    "typescript": "^3.6.2",
+    "ts-common": "git+https://github.com/bizarim/ts-common.git#master"
+  },
+  "devDependencies": {
+    "@types/node": "^12.7.4",
+    "nodemon": "^1.19.2",
+    "ts-node": "^8.3.0",
+    "tsconfig-paths": "^3.8.0",
+    "tslint": "^5.19.0"
+  }
+}

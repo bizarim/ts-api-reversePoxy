@@ -1,0 +1,26 @@
+[
+    {
+        "path": [
+            "/provider/**"
+        ],
+        "target": "http://localhost:10230"
+    },
+    {
+        "path": [
+            "/test/provider/**"
+        ],
+        "target": "http://localhost:10231"
+    },
+    {
+        "path": [
+            "/test/wallet/**"
+        ],
+        "target": "http://localhost:10232"
+    },
+    {
+        "path": [
+            "/test/ledger/**"
+        ],
+        "target": "http://localhost:10233"
+    }
+]
