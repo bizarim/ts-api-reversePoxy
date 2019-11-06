@@ -36,13 +36,13 @@
     "rimraf": "^3.0.0",
     "rxjs": "^6.5.3",
     "typescript": "^3.6.2",
+    "tslint": "^5.19.0",
     "ts-common": "git+https://github.com/bizarim/ts-common.git#master"
   },
   "devDependencies": {
     "@types/node": "^12.7.4",
     "nodemon": "^1.19.2",
     "ts-node": "^8.3.0",
-    "tsconfig-paths": "^3.8.0",
-    "tslint": "^5.19.0"
+    "tsconfig-paths": "^3.8.0"
   }
 }
