@@ -29,7 +29,7 @@ let LoggingInterceptor = class LoggingInterceptor {
             if (args[i] instanceof http_1.IncomingMessage) {
                 const msg = args[i];
                 const logReq = { name: 'req', guid: guid, ip: msg.connection.remoteAddress, method: msg.method, url: msg.url };
-                this.sharedService.getLogger().info(JSON.stringify(logReq));
+                // this.sharedService.getLogger().info(JSON.stringify(logReq));
                 break;
             }
         }
@@ -38,12 +38,12 @@ let LoggingInterceptor = class LoggingInterceptor {
             const endAt = process.hrtime();
             const ms = ((endAt[0] - startAt[0]) * 1e3 + (endAt[1] - startAt[1]) * 1e-6).toFixed(3);
             const logRes = { name: 'res', guid: guid, context: res, ms: ms };
-            this.sharedService.getLogger().info(JSON.stringify(logRes));
+            // this.sharedService.getLogger().info(JSON.stringify(logRes));
             return res;
         }), operators_1.catchError(err => {
             if (err instanceof Error) {
                 const logEx = { guid: guid, message: err.message, stack: err.stack };
-                this.sharedService.getLogger().error(JSON.stringify(logEx));
+                // this.sharedService.getLogger().error(JSON.stringify(logEx));
             }
             return rxjs_1.throwError(new common_1.BadGatewayException());
         }));

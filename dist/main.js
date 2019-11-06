@@ -19,7 +19,7 @@ ts_common_1.MainPath.set(__dirname);
 function bootstrap() {
     return __awaiter(this, void 0, void 0, function* () {
         const loader = new ts_common_1.ConfigLoader();
-        const path = `${ts_common_1.MainPath.get()}\\config\\svr.${loader.getEnv()}.json`;
+        const path = `${ts_common_1.MainPath.get()}/config/svr.${loader.getEnv()}.json`;
         const config = loader.toJson(path);
         console.log(path);
         const app = yield core_1.NestFactory.create(app_module_1.AppModule);
@@ -30,6 +30,6 @@ function bootstrap() {
 bootstrap().then(() => __awaiter(void 0, void 0, void 0, function* () {
     const shared = new SharedService_1.SharedService();
     yield shared.onModuleInit();
-    shared.getLogger().info('run');
+    // shared.getLogger().info('run');
 }));
 //# sourceMappingURL=main.js.map
