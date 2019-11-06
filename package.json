@@ -9,8 +9,8 @@
     "build": "npm run lint && rimraf dist && npm run copy && tsc",
     "d": "set NODE_ENV=dev&& npm run build && nodemon --config nodemon.json",
     "copy": "copyfiles -u 2 \"./src/config/*.json\" \"./dist/config/\"",
-    "dev": "npm run build && tsc && node dist/main.js",
-    "start": "npm run lint && npm run lint && tsc && node dist/main.js"
+    "dev": "npm run build && node dist/main.js",
+    "start": "npm run lint && npm run lint && node dist/main.js"
   },
   "repository": {
     "type": "git",
