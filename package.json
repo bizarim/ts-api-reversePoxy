@@ -28,21 +28,19 @@
     "@nestjs/core": "^6.6.7",
     "@nestjs/platform-express": "^6.6.7",
     "@types/http-proxy-middleware": "^0.19.0",
+    "@types/node": "^12.7.4",
     "class-transformer": "^0.2.3",
     "class-validator": "^0.10.0",
     "copyfiles": "^2.1.1",
     "http-proxy-middleware": "^0.19.1",
+    "nodemon": "^1.19.2",
     "reflect-metadata": "^0.1.13",
     "rimraf": "^3.0.0",
     "rxjs": "^6.5.3",
-    "typescript": "^3.6.2",
     "tslint": "^5.19.0",
-    "ts-common": "git+https://github.com/bizarim/ts-common.git#master"
-  },
-  "devDependencies": {
-    "@types/node": "^12.7.4",
-    "nodemon": "^1.19.2",
+    "tsconfig-paths": "^3.8.0",
     "ts-node": "^8.3.0",
-    "tsconfig-paths": "^3.8.0"
+    "typescript": "^3.6.2",
+    "ts-common": "git+https://github.com/bizarim/ts-common.git#master"
   }
 }
